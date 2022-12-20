@@ -8,7 +8,7 @@ const Reviews = ({reviews}) => {
       <Container>
         <h2>리뷰</h2>
         <ul className='reviewList'>
-          { reviews?.results.length === 0 ? <li className='review_none'>등록된 리뷰가 없습니다.</li> : 
+          { reviews?.results && reviews?.results.length === 0 ? <li className='review_none'>등록된 리뷰가 없습니다.</li> : 
             reviews?.results && reviews?.results.map((item)=>(
               <li key={item.id}>
                 <div className='review_user'>
