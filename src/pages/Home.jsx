@@ -10,7 +10,7 @@ import SyncLoader from 'react-spinners/SyncLoader';
 const Home = () => {
 	const dispatch = useDispatch();
 	const { popularMovies, topRatedMovies, upcomingMovies, loading } = useSelector((state) => state.movie); //store에서 가져옴, loading 상태도 추가
-	console.log('현재 Home, ', popularMovies);
+	// console.log('현재 Home, ', popularMovies);
 	useEffect(() => {
 		dispatch(movieAction.getMovies());
 	}, [dispatch]);

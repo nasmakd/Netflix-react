@@ -20,12 +20,6 @@ const Navigation = () => {
 						<Link to='/movies' className='nav_item'>
 							Movies
 						</Link>
-						<Link to='#' className='nav_item'>
-							New & Popular
-						</Link>
-						<Link to='#' className='nav_item'>
-							My List
-						</Link>
 					</Nav>
 					<Form className='d-flex'>
 						<Form.Control type='search' placeholder='Search' className='me-2' aria-label='Search' />
