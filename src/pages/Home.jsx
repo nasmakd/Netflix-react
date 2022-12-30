@@ -32,15 +32,15 @@ const Home = () => {
 
 	return (
 		<div>
-			{upcomingMovies.results && <Banner movie={upcomingMovies.results[1]} />}
+			{upcomingMovies.results && <Banner movie={popularMovies.results[0]} />}
 			<div className="slide-container">
-        <h2>Popular Movies</h2>
-        <MovieSlide movie={popularMovies} />
-        <h2>Top Rated Movies</h2>
-        <MovieSlide movie={topRatedMovies} />
-        <h2>Upcoming Movies</h2>
-        <MovieSlide movie={upcomingMovies} />
-      </div>
+				<h2>Popular Movies</h2>
+				<MovieSlide movie={popularMovies} />
+				<h2>Top Rated Movies</h2>
+				<MovieSlide movie={topRatedMovies} />
+				<h2>Upcoming Movies</h2>
+				<MovieSlide movie={upcomingMovies} />
+			</div>
 
 		</div>
 	);
