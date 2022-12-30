@@ -11,6 +11,10 @@ const Home = () => {
 	const dispatch = useDispatch();
 	const { popularMovies, topRatedMovies, upcomingMovies, loading } = useSelector((state) => state.movie); //store에서 가져옴, loading 상태도 추가
 	// console.log('현재 Home, ', popularMovies);
+	function sessionData(){
+		window.sessionStorage.setItem("popularMovies", JSON.stringify(popularMovies))
+	}
+	sessionData();
 	useEffect(() => {
 		dispatch(movieAction.getMovies());
 	}, [dispatch]);

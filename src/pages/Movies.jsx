@@ -10,10 +10,14 @@ const Movies = () => {
 	const { popularMovies, topRatedMovies, upcomingMovies, loading } =
 		useSelector((state) => state.movie);
 	const [data, setData] = useState(popularMovies);
-	console.log(popularMovies)
-	console.log(data)
+	const getFirstData = ()=>{
+		const firstData = JSON.parse(sessionStorage.getItem("popularMovies"));
+		setData(firstData);
+		console.log(firstData)
+	}
 	useEffect(() => {
 		dispatch(movieAction.getMovies());
+		getFirstData();
 	}, [dispatch]);
 	if (loading) {
 		return (
